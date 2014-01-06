@@ -1,0 +1,6 @@
+[submodule "core"]
+	path = core
+	url = https://exprezzo@github.com/exprezzo/octopus.git
+[submodule "constructor"]
+	path = constructor
+	url = https://exprezzo@github.com/exprezzo/constructor01.git

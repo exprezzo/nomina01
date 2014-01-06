@@ -1,0 +1,31 @@
+<IfModule mod_rewrite.c>	
+	# Enrutamiento mediante htacces de apache		
+    RewriteEngine On				
+	
+	# NOMINA
+	RewriteRule ^$  sistema/nominas/buscar
+	RewriteRule ^/$ sistema/nominas/buscar
+	
+	# CONSTRUCTOR
+	RewriteRule ^/constructor$ core/entrada.php/sistema/constructor/paginas/inicio$1 [L]
+	RewriteRule ^/constructor/$ core/entrada.php/sistema/constructor/paginas/inicio$1 [L]
+	
+	RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ core/entrada.php/$1 [L]
+	ErrorDocument 500 error500.html
+</IfModule>
+
+<IfModule mod_rewrite.c>	
+	# Enrutamiento mediante htacces de apache		
+    RewriteEngine On			
+	RewriteRule ^$ core/entrada.php/sistema/paginas/inicio$1 [L]
+	RewriteRule ^/$ core/entrada.php/sistema/paginas/inicio$1 [L]
+	
+	
+	
+	RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ core/entrada.php/$1 [L]
+	ErrorDocument 500 error500.html
+</IfModule>
